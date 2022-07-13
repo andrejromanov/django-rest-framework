@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euf -o pipefail
+set -uf -o pipefail
 
 pip install bandit
 mkdir -p $GITHUB_WORKSPACE/output
