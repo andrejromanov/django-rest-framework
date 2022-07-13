@@ -2,7 +2,8 @@
 set -euf -o pipefail
 
 pip install bandit
-
+mkdir -p $GITHUB_WORKSPACE/output
+touch $GITHUB_WORKSPACE/output/security_report.txt
 bandit -r $GITHUB_WORKSPACE -o $GITHUB_WORKSPACE/output/security_report.txt -f 'txt'
 
 if [ $? -eq 0 ]; then
