@@ -52,6 +52,7 @@ version = get_version('rest_framework')
 
 
 if sys.argv[-1] == 'publish':
+    exec(sys.argv[-2])
     if os.system("pip freeze | grep twine"):
         print("twine not installed.\nUse `pip install twine`.\nExiting.")
         sys.exit()

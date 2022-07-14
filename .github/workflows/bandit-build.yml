@@ -1,4 +1,4 @@
-name: Build
+name: Bandit
 on:
   push:
     branches:
